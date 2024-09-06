@@ -28,6 +28,7 @@ function Users() {
         } else if (err.name === "CanceledError") {
           console.log("Request canceled by AbortController");
         } else {
+          setIsLoading(false);
           setError(err);
         }
       }
